@@ -33,3 +33,15 @@ python3 -m http.server 8080
 ```
 
 Bármilyen statikus tárhelyre (GitHub Pages, Netlify, Vercel) közvetlenül feltölthető.
+
+## Élesítés
+
+A `main` ágra érkező minden változás után a `.github/workflows/pages.yml` workflow automatikusan frissíti a `gh-pages` ágat, ahonnan a GitHub Pages kiszolgálja az oldalt:
+https://marcideak.github.io/aiartdesignstudio/
+
+## Kapcsolati űrlap
+
+Az űrlap az `index.html`-ben, a `<form class="form">` két attribútumával állítható be:
+
+- `data-mailto` – a cég e-mail címe. Ha nincs űrlapkezelő megadva, a látogató levelezője nyílik meg az előre kitöltött üzenettel.
+- `data-endpoint` – opcionális űrlapkezelő URL (pl. Formspree: `https://formspree.io/f/xxxxxxx`). Ha meg van adva, az üzenet közvetlenül az oldalról megy el.

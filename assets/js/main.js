@@ -656,13 +656,35 @@
       return;
     }
     const btn = $("button[type=submit] span", form);
-    btn.textContent = "Küldés…";
-    setTimeout(() => {
+    const data = new FormData(form);
+    const needs = data.getAll("need").join(", ");
+    const done = () => {
       btn.textContent = "Elküldve ✓";
       note.textContent = "Köszönjük! Hamarosan jelentkezünk. 🚀";
       form.reset();
       setTimeout(() => (btn.textContent = "Küldés"), 3000);
-    }, 900);
+    };
+
+    // Ha van beállított űrlapkezelő (pl. Formspree), oda küldjük;
+    // különben a látogató levelezőjében nyílik meg az előre kitöltött e-mail.
+    const endpoint = form.dataset.endpoint;
+    if (!endpoint) {
+      const body = `Név: ${data.get("name")}\nE-mail: ${data.get("email")}\nIgény: ${needs || "-"}\n\n${data.get("message")}`;
+      window.location.href = `mailto:${form.dataset.mailto}?subject=${encodeURIComponent("Ajánlatkérés – " + data.get("name"))}&body=${encodeURIComponent(body)}`;
+      note.textContent = "Megnyitottuk a leveleződ — csak nyomj a Küldésre! ✉️";
+      return;
+    }
+    btn.textContent = "Küldés…";
+    fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
+      .then((res) => {
+        if (!res.ok) throw new Error(res.status);
+        done();
+      })
+      .catch(() => {
+        btn.textContent = "Küldés";
+        note.classList.add("is-error");
+        note.textContent = `Hoppá, valami hiba történt. Írj nekünk közvetlenül: ${form.dataset.mailto}`;
+      });
   });
   $$(".field input, .field textarea", form).forEach((i) =>
     i.addEventListener("input", () => i.closest(".field").classList.remove("is-invalid"))
