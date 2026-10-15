@@ -1,4 +1,4 @@
-# AIART Studio — weboldal
+# Cortex AI — weboldal
 
 Egyedi, fiatalos, interaktív és reszponzív bemutatkozó oldal egy mesterséges intelligenciával foglalkozó ügynökség számára.
 
