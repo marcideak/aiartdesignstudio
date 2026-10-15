@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AIART Studio — Mesterséges intelligencia, emberi kreativitással</title>
+  <meta name="description" content="AI stratégia, egyedi modellek, generatív design és automatizáció. Az AIART Studio az ötleteidet működő intelligenciává formálja.">
+  <meta name="theme-color" content="#0b0b10">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Bevezető -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__count"><span data-loader-count>0</span>%</div>
+    <div class="loader__bar"><i></i></div>
+  </div>
+
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigáció -->
+  <header class="nav">
+    <a href="#top" class="nav__logo" aria-label="AIART Studio – főoldal">
+      <span class="logo-mark" aria-hidden="true"></span>AIART<em>studio</em>
+    </a>
+    <nav class="nav__links" aria-label="Fő navigáció">
+      <a href="#rolunk">Rólunk</a>
+      <a href="#szolgaltatasok">Szolgáltatások</a>
+      <a href="#demo">Demó</a>
+      <a href="#munkak">Munkák</a>
+      <a href="#folyamat">Folyamat</a>
+    </nav>
+    <a href="#kapcsolat" class="btn btn--small magnetic nav__cta"><span>Beszéljünk</span></a>
+    <button class="nav__burger" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobil navigáció">
+      <a href="#rolunk" style="--i:0">Rólunk</a>
+      <a href="#szolgaltatasok" style="--i:1">Szolgáltatások</a>
+      <a href="#demo" style="--i:2">Demó</a>
+      <a href="#munkak" style="--i:3">Munkák</a>
+      <a href="#folyamat" style="--i:4">Folyamat</a>
+      <a href="#kapcsolat" style="--i:5">Kapcsolat</a>
+    </nav>
+    <p class="mobile-menu__foot">hello@aiart.studio</p>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="blob blob--a" data-speed="-0.15" aria-hidden="true"></div>
+      <div class="blob blob--b" data-speed="0.2" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <p class="eyebrow hero__eyebrow"><span class="pulse"></span> AI ügynökség · Budapest · 2026</p>
+        <h1 class="hero__title">
+          <span class="line"><span class="split">Ötletekből</span></span>
+          <span class="line"><span class="split outline">intelligencia</span></span>
+          <span class="line"><span class="split">— <em class="grad">kreatívan.</em></span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__lead">Egyedi AI megoldásokat, generatív designt és okos automatizációt építünk olyan csapatoknak, akik nem akarnak lemaradni a jövőről.</p>
+          <div class="hero__actions">
+            <a href="#demo" class="btn magnetic"><span>Próbáld ki élőben</span><i aria-hidden="true">→</i></a>
+            <a href="#munkak" class="link-underline">Nézd meg a munkáinkat</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#rolunk" class="scroll-hint" aria-label="Görgess lejjebb">
+        <span>Görgess</span><i></i>
+      </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Gépi tanulás</span><b>✦</b><span>Generatív design</span><b>✦</b><span>LLM ügynökök</span><b>✦</b><span>Computer vision</span><b>✦</b><span>Automatizáció</span><b>✦</b><span>Adatstratégia</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- RÓLUNK / MANIFESTO -->
+    <section class="manifesto" id="rolunk">
+      <div class="container">
+        <p class="eyebrow" data-reveal>( 01 ) — Rólunk</p>
+        <p class="manifesto__text" data-words>
+          Hiszünk benne, hogy a mesterséges intelligencia nem a kreativitás helyett van, hanem érte. Mérnökök, designerek és álmodozók csapata vagyunk, akik a legújabb modelleket kézzelfogható, emberközeli termékekké alakítják — gyorsan, átláthatóan és egy csipet játékossággal.
+        </p>
+
+        <div class="stats">
+          <div class="stat" data-reveal style="--d:0">
+            <strong><span data-count="120">0</span>+</strong>
+            <span>leszállított AI projekt</span>
+          </div>
+          <div class="stat" data-reveal style="--d:1">
+            <strong><span data-count="38">0</span>%</strong>
+            <span>átlagos költségcsökkenés</span>
+          </div>
+          <div class="stat" data-reveal style="--d:2">
+            <strong><span data-count="14">0</span></strong>
+            <span>ország ügyfelei</span>
+          </div>
+          <div class="stat" data-reveal style="--d:3">
+            <strong><span data-count="24">0</span>/7</strong>
+            <span>tanuló rendszerek</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SZOLGÁLTATÁSOK – vízszintes görgetés -->
+    <section class="services" id="szolgaltatasok">
+      <div class="services__sticky">
+        <div class="services__head container">
+          <p class="eyebrow">( 02 ) — Szolgáltatások</p>
+          <h2 class="h2">Amiben <span class="grad">szuperek</span> vagyunk</h2>
+        </div>
+        <div class="services__track">
+          <article class="card tilt" style="--c1:#c6ff3d;--c2:#3dffb4">
+            <span class="card__num">01</span>
+            <div class="card__icon" aria-hidden="true">◎</div>
+            <h3>AI stratégia</h3>
+            <p>Feltérképezzük, hol hoz valódi értéket az AI a cégednél, és lépésről lépésre megtervezzük a bevezetést.</p>
+            <ul><li>Workshop</li><li>Roadmap</li><li>ROI-elemzés</li></ul>
+          </article>
+          <article class="card tilt" style="--c1:#7c5cff;--c2:#c05cff">
+            <span class="card__num">02</span>
+            <div class="card__icon" aria-hidden="true">⌘</div>
+            <h3>LLM ügynökök</h3>
+            <p>Saját adataidon tanuló asszisztensek, chatbotok és ügynökök, amik tényleg elvégzik a munkát.</p>
+            <ul><li>RAG</li><li>Tool use</li><li>Integrációk</li></ul>
+          </article>
+          <article class="card tilt" style="--c1:#ff5ca8;--c2:#ff9a5c">
+            <span class="card__num">03</span>
+            <div class="card__icon" aria-hidden="true">✺</div>
+            <h3>Generatív design</h3>
+            <p>Képek, videók, márkaelemek és 3D tartalmak AI-jal — emberi art direction mellett, egyedi stílusban.</p>
+            <ul><li>Brand</li><li>Kampány</li><li>Termékfotó</li></ul>
+          </article>
+          <article class="card tilt" style="--c1:#5cc8ff;--c2:#7c5cff">
+            <span class="card__num">04</span>
+            <div class="card__icon" aria-hidden="true">⟁</div>
+            <h3>Computer vision</h3>
+            <p>Képfelismerés, minőségellenőrzés és valós idejű videóelemzés gyártásra, kereskedelemre, egészségügyre.</p>
+            <ul><li>Detektálás</li><li>OCR</li><li>Edge AI</li></ul>
+          </article>
+          <article class="card tilt" style="--c1:#ffd35c;--c2:#c6ff3d">
+            <span class="card__num">05</span>
+            <div class="card__icon" aria-hidden="true">↻</div>
+            <h3>Automatizáció</h3>
+            <p>Unalmas, ismétlődő folyamatok helyett okos workflow-k, amik éjjel-nappal dolgoznak helyetted.</p>
+            <ul><li>Dokumentumok</li><li>CRM</li><li>Riportok</li></ul>
+          </article>
+          <article class="card card--cta">
+            <h3>Van egy őrült ötleted?</h3>
+            <p>Imádjuk az ilyeneket. Meséld el, és megmutatjuk, mi valósítható meg belőle.</p>
+            <a href="#kapcsolat" class="btn btn--dark magnetic"><span>Írj nekünk</span><i aria-hidden="true">→</i></a>
+          </article>
+        </div>
+        <div class="services__bar container" aria-hidden="true"><i></i></div>
+      </div>
+    </section>
+
+    <!-- DEMÓ -->
+    <section class="demo" id="demo">
+      <div class="container demo__grid">
+        <div class="demo__intro">
+          <p class="eyebrow" data-reveal>( 03 ) — Élő demó</p>
+          <h2 class="h2" data-reveal style="--d:1">Válassz egy promptot, <span class="grad">mi generálunk</span>.</h2>
+          <p class="muted" data-reveal style="--d:2">Egy kis ízelítő abból, hogyan lesz pár szóból egyedi vizuál. (Ez a demó a böngésződben fut, generatív algoritmussal.)</p>
+          <div class="chips" role="group" aria-label="Prompt választó" data-reveal style="--d:3">
+            <button class="chip is-active" data-prompt="neon város éjjel, eső után">Neon város</button>
+            <button class="chip" data-prompt="nyugodt óceán, naplemente, pasztell">Óceán</button>
+            <button class="chip" data-prompt="kozmikus virág, lila köd, csillagok">Kozmosz</button>
+            <button class="chip" data-prompt="zöld erdő, reggeli fény, köd">Erdő</button>
+            <button class="chip" data-prompt="savas lime absztrakt, geometria">Absztrakt</button>
+          </div>
+          <form class="prompt" data-reveal style="--d:4">
+            <label for="prompt-input" class="sr-only">Saját prompt</label>
+            <input id="prompt-input" type="text" maxlength="80" placeholder="…vagy írd be a sajátod" autocomplete="off">
+            <button type="submit" class="btn btn--small magnetic"><span>Generálás</span></button>
+          </form>
+        </div>
+
+        <div class="demo__window" data-reveal style="--d:2">
+          <div class="window__bar"><i></i><i></i><i></i><span>aiart://generate</span></div>
+          <div class="window__body">
+            <canvas class="demo__canvas" width="800" height="800" aria-label="Generált kép"></canvas>
+            <div class="demo__status"><span class="demo__spinner"></span><span data-demo-status>Kész</span></div>
+          </div>
+          <p class="window__caption"><span class="caret">›</span> <span data-demo-caption></span><span class="blink">_</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MUNKÁK -->
+    <section class="work" id="munkak">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>( 04 ) — Válogatott munkák</p>
+          <h2 class="h2" data-reveal style="--d:1">Projektek, amikre <span class="grad">büszkék</span> vagyunk</h2>
+        </div>
+        <div class="work__grid">
+          <a class="project" href="#kapcsolat" data-reveal style="--g1:#7c5cff;--g2:#ff5ca8">
+            <div class="project__art" data-speed="0.06"><span class="shape shape--ring"></span></div>
+            <div class="project__meta"><h3>Lumen Bank</h3><p>LLM ügyfélszolgálati ügynök · −62% várakozás</p></div>
+            <span class="project__tag">Fintech</span>
+          </a>
+          <a class="project project--tall" href="#kapcsolat" data-reveal style="--d:1;--g1:#c6ff3d;--g2:#3dffb4">
+            <div class="project__art" data-speed="-0.06"><span class="shape shape--grid"></span></div>
+            <div class="project__meta"><h3>Verde Farm</h3><p>Drónos növényfelismerés · 4 ország</p></div>
+            <span class="project__tag">Agritech</span>
+          </a>
+          <a class="project" href="#kapcsolat" data-reveal style="--d:2;--g1:#ff9a5c;--g2:#ffd35c">
+            <div class="project__art" data-speed="0.05"><span class="shape shape--blob"></span></div>
+            <div class="project__meta"><h3>Pixelhaus</h3><p>Generatív kampányvizuálok · 3000+ asset</p></div>
+            <span class="project__tag">Brand</span>
+          </a>
+          <a class="project project--wide" href="#kapcsolat" data-reveal style="--g1:#5cc8ff;--g2:#7c5cff">
+            <div class="project__art" data-speed="-0.04"><span class="shape shape--wave"></span></div>
+            <div class="project__meta"><h3>Medora Clinic</h3><p>Orvosi képelemzés & automatikus riportolás</p></div>
+            <span class="project__tag">Health</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOLYAMAT -->
+    <section class="process" id="folyamat">
+      <div class="container process__grid">
+        <div class="process__aside">
+          <p class="eyebrow" data-reveal>( 05 ) — Így dolgozunk</p>
+          <h2 class="h2" data-reveal style="--d:1">Ötlettől az élesítésig, <span class="grad">hetek</span> alatt.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__time">1. hét</span>
+            <h3>Felfedezés</h3>
+            <p>Workshopon megismerjük a céljaidat, az adataidat és azokat a pontokat, ahol az AI a legtöbbet hozza.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__time">2–3. hét</span>
+            <h3>Prototípus</h3>
+            <p>Gyorsan kipróbálható, működő prototípust építünk, hogy már az elején lásd és érezd az eredményt.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__time">4–8. hét</span>
+            <h3>Fejlesztés</h3>
+            <p>Skálázható, biztonságos rendszerré csiszoljuk, integrálva a meglévő eszközeidbe.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__dot"></span>
+            <span class="step__time">∞</span>
+            <h3>Tanulás & növekedés</h3>
+            <p>Élesítés után mérünk, finomhangolunk és fejlesztjük tovább — a rendszer veled együtt okosodik.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- GYIK -->
+    <section class="faq">
+      <div class="container faq__grid">
+        <div>
+          <p class="eyebrow" data-reveal>( 06 ) — GYIK</p>
+          <h2 class="h2" data-reveal style="--d:1">Kérdésed van?</h2>
+        </div>
+        <div class="faq__list">
+          <details data-reveal>
+            <summary>Mennyibe kerül egy AI projekt?<i aria-hidden="true"></i></summary>
+            <div><p>Egy felfedező workshop már néhány nap alatt lezajlik, egy működő prototípus jellemzően 2–3 hét. Minden projektre átlátható, fix árajánlatot adunk.</p></div>
+          </details>
+          <details data-reveal style="--d:1">
+            <summary>Biztonságban vannak az adataink?<i aria-hidden="true"></i></summary>
+            <div><p>Igen. GDPR-kompatibilis, EU-s infrastruktúrán dolgozunk, és igény esetén teljesen a saját szervereiden futó megoldást építünk.</p></div>
+          </details>
+          <details data-reveal style="--d:2">
+            <summary>Kell, hogy legyen saját adatunk?<i aria-hidden="true"></i></summary>
+            <div><p>Nem feltétlenül. Sok megoldás már meglévő modellekre épül, a saját adat pedig „csak” még pontosabbá teszi az eredményt.</p></div>
+          </details>
+          <details data-reveal style="--d:3">
+            <summary>Kis cégekkel is dolgoztok?<i aria-hidden="true"></i></summary>
+            <div><p>Abszolút. Startupoktól a nagyvállalatokig mindenkinek segítünk — a méret helyett az ötlet számít.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- KAPCSOLAT -->
+    <section class="contact" id="kapcsolat">
+      <div class="container">
+        <h2 class="contact__title">
+          <span class="line"><span class="split">Építsük meg</span></span>
+          <span class="line"><span class="split"><em class="grad">együtt</em> a jövőt.</span></span>
+        </h2>
+        <div class="contact__grid">
+          <div class="contact__info" data-reveal>
+            <p class="muted">Írj pár sort a projektedről, és 24 órán belül jelentkezünk egy ingyenes konzultációs időponttal.</p>
+            <a class="contact__mail link-underline" href="mailto:hello@aiart.studio">hello@aiart.studio</a>
+            <p class="muted">Budapest, Király utca 1.<br>+36 1 234 5678</p>
+          </div>
+          <form class="form" novalidate data-reveal style="--d:1" data-mailto="hello@aiart.studio" data-endpoint="">
+            <div class="field">
+              <input id="f-name" name="name" type="text" placeholder=" " required autocomplete="name">
+              <label for="f-name">Neved</label>
+            </div>
+            <div class="field">
+              <input id="f-email" name="email" type="email" placeholder=" " required autocomplete="email">
+              <label for="f-email">E-mail címed</label>
+            </div>
+            <fieldset class="budget">
+              <legend>Mire van szükséged?</legend>
+              <label><input type="checkbox" name="need" value="strategia"><span>Stratégia</span></label>
+              <label><input type="checkbox" name="need" value="agent"><span>LLM ügynök</span></label>
+              <label><input type="checkbox" name="need" value="design"><span>Generatív design</span></label>
+              <label><input type="checkbox" name="need" value="vision"><span>Computer vision</span></label>
+              <label><input type="checkbox" name="need" value="auto"><span>Automatizáció</span></label>
+            </fieldset>
+            <div class="field">
+              <textarea id="f-msg" name="message" rows="4" placeholder=" " required></textarea>
+              <label for="f-msg">Mesélj az ötletedről</label>
+            </div>
+            <button type="submit" class="btn magnetic"><span>Küldés</span><i aria-hidden="true">→</i></button>
+            <p class="form__note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__top">
+      <p>© <span data-year></span> AIART Studio. Minden jog fenntartva.</p>
+      <nav aria-label="Közösségi oldalak">
+        <a href="#" class="link-underline">LinkedIn</a>
+        <a href="#" class="link-underline">Instagram</a>
+        <a href="#" class="link-underline">Behance</a>
+        <a href="#" class="link-underline">GitHub</a>
+      </nav>
+      <a href="#top" class="to-top" aria-label="Vissza a tetejére">↑</a>
+    </div>
+    <div class="footer__brand" aria-hidden="true"><span data-speed="0.12">AIART</span></div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

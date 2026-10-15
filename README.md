@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# AIART Studio — weboldal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Egyedi, fiatalos, interaktív és reszponzív bemutatkozó oldal egy mesterséges intelligenciával foglalkozó ügynökség számára.
 
-## Available Scripts
+## Funkciók
 
-In the project directory, you can run:
+- **Interaktív hero** – egérre reagáló „neurális háló” canvas animáció, betűnként beúszó címsor
+- **Görgetésre mozgó elemek** – parallax, felbukkanó szekciók, szavanként kivilágosodó manifesztó, idővonal-kitöltés
+- **Vízszintes görgetésű szolgáltatás-sáv** (asztali nézetben rögzített, mobilon függőleges lista)
+- **Görgetési sebességre reagáló futószalag** (marquee)
+- **Élő demó** – promptból a böngészőben generált egyedi kép „diffúziós” animációval
+- Egyedi kurzor, mágneses gombok, 3D-ben dőlő kártyák
+- Animált GYIK, lebegő címkés kapcsolati űrlap validációval
+- Teljesen reszponzív, és tiszteletben tartja a `prefers-reduced-motion` beállítást
 
-### `npm start`
+## Technológia
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Tiszta HTML + CSS + JavaScript — nincs build lépés és nincs függőség.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+index.html
+assets/
+  css/style.css
+  js/main.js
+  favicon.svg
+```
 
-### `npm test`
+## Futtatás helyben
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+python3 -m http.server 8080
+# majd: http://localhost:8080
+```
 
-### `npm run build`
+Bármilyen statikus tárhelyre (GitHub Pages, Netlify, Vercel) közvetlenül feltölthető.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Élesítés
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A `main` ágra érkező minden változás után a `.github/workflows/pages.yml` workflow automatikusan frissíti a `gh-pages` ágat, ahonnan a GitHub Pages kiszolgálja az oldalt:
+https://marcideak.github.io/aiartdesignstudio/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Kapcsolati űrlap
 
-### `npm run eject`
+Az űrlap az `index.html`-ben, a `<form class="form">` két attribútumával állítható be:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `data-mailto` – a cég e-mail címe. Ha nincs űrlapkezelő megadva, a látogató levelezője nyílik meg az előre kitöltött üzenettel.
+- `data-endpoint` – opcionális űrlapkezelő URL (pl. Formspree: `https://formspree.io/f/xxxxxxx`). Ha meg van adva, az üzenet közvetlenül az oldalról megy el.
