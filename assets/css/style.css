@@ -1,5 +1,5 @@
 /* =========================================================
-   AIART Studio — stíluslap
+   Cortex AI — stíluslap
    ========================================================= */
 
 :root {
@@ -641,8 +641,8 @@ details p { margin: 0; padding: 0 3rem 1.6rem 0; color: var(--muted); }
 .to-top:hover { background: var(--lime); color: var(--bg); transform: translateY(-4px); }
 .footer__brand {
   font-family: var(--f-display); font-weight: 900;
-  font-size: 26vw; line-height: .8; letter-spacing: -0.07em; text-align: center;
-  margin-top: 2rem; margin-bottom: -3vw;
+  font-size: 17vw; line-height: .8; letter-spacing: -0.06em; text-align: center;
+  margin-top: clamp(2.5rem, 6vw, 5rem); margin-bottom: -2vw;
   user-select: none;
 }
 .footer__brand span {
